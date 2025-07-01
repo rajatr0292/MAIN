@@ -1,47 +1,115 @@
 /* Add your CSS styles below */
-
 body {
-    background: #fff;
-    color: #111;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(120deg, #f8fafc 0%, #e0e7ef 100%);
+    color: #222;
     margin: 0;
     padding: 0;
 }
 
-header, footer {
-    background: #111;
+header {
+    background: #1e293b;
     color: #fff;
-    padding: 1em 0;
+    padding: 2rem 0 1rem 0;
     text-align: center;
+    box-shadow: 0 2px 8px rgba(30,41,59,0.08);
+    position: relative;
+    animation: header-slide-down 0.7s cubic-bezier(0.4,0,0.2,1);
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
+@keyframes header-slide-down {
+    from {
+        transform: translateY(-80px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+header h1 {
     margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 2em;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+nav {
+    margin-top: 1rem;
 }
 
 nav a {
-    color: #fff;
+    color: #cbd5e1;
     text-decoration: none;
+    margin: 0 1.5rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #38bdf8;
 }
 
 main {
-    display: flex;
-    gap: 2em;
-    padding: 2em;
+    max-width: 900px;
+    margin: 2rem auto;
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 24px rgba(30,41,59,0.10);
+    padding: 2rem 2.5rem;
 }
 
-section {
-    flex: 2;
+h2 {
+    color: #1e293b;
+    margin-top: 0;
+    font-size: 2rem;
+    border-left: 4px solid #38bdf8;
+    padding-left: 0.75rem;
 }
 
-aside {
-    flex: 1;
-    background: #f4f4f4;
-    padding: 1em;
-    border-left: 2px solid #111;
+p {
+    line-height: 1.7;
+    margin: 1rem 0;
+}
+
+button, .btn {
+    background: linear-gradient(90deg, #38bdf8 0%, #0ea5e9 100%);
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(56,189,248,0.10);
+    transition: background 0.2s, transform 0.1s;
+}
+
+button:hover, .btn:hover {
+    background: linear-gradient(90deg, #0ea5e9 0%, #38bdf8 100%);
+    transform: translateY(-2px) scale(1.03);
+}
+
+footer {
+    text-align: center;
+    color: #64748b;
+    padding: 1.5rem 0;
+    background: #f1f5f9;
+    border-top: 1px solid #e2e8f0;
+    margin-top: 3rem;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 1rem;
+    }
+    header h1 {
+        font-size: 1.5rem;
+    }
+    nav a {
+        margin: 0 0.5rem;
+    }
 }
