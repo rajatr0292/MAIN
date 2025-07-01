@@ -1,43 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advanced Structure</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-        <h1>Website Title</h1>
-    </header>
-    <main>
-        <section>
-            <h2>Welcome</h2>
-            <p>This is an advanced HTML structure with a black and white theme.</p>
-        </section>
-        <section>
-            <h2>Features</h2>
-            <ul>
-                <li>Modern layout</li>
-                <li>Responsive design</li>
-                <li>Clean navigation</li>
-            </ul>
-        </section>
-        <aside>
-            <h3>Sidebar</h3>
-            <p>Additional information or links can go here.</p>
-        </aside>
-    </main>
-    <footer>
-        <p>&copy; 2024 Your Website</p>
-    </footer>
-</body>
-</html>
+/* Add your CSS styles below */
+
+body {
+    background: #fff;
+    color: #111;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    background: #111;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    gap: 2em;
+    padding: 2em;
+}
+
+section {
+    flex: 2;
+}
+
+aside {
+    flex: 1;
+    background: #f4f4f4;
+    padding: 1em;
+    border-left: 2px solid #111;
+}
